@@ -1,9 +1,148 @@
 body {
-  background-color: powderblue;
+  font-family: "Montserrat", sans-serif;
+  min-width: fit-content;
 }
-h1 {
-  color: blue;
+.container {
+  height: 282px;
+  background-color: white;
 }
-p {
-  color: red;
+.header-container {
+  width: 900px;
+  max-width: 1140px;
+  margin: auto;
+}
+.topDiv {
+  height: 90px;
+  width: 100%;
+  background-color: white;
+}
+.topDiv-container {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 30px 60px;
+  /* border: 1px solid black; */
+  height: 100%;
+}
+.topDiv-logo-container {
+  grid-column: span 2;
+  grid-row: span 2;
+  place-items: center;
+  margin: auto;
+}
+
+.image {
+  position: relative;
+  bottom: 0;
+}
+
+.midDiv {
+  height: 106px;
+  width: 100%;
+  background-color: #00aeef;
+}
+
+.topDiv-container > div {
+  /* border: 1px solid red; */
+}
+
+.topDov-social-and-menu {
+  grid-column: span 10;
+  align-items: center; /* Center vertically */
+  justify-items: center; /* Center horizontally */
+}
+.top-div-menu-items {
+  grid-column: span 10;
+}
+
+.top-Div-social-icons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  margin-right: 4px;
+  height: 100%;
+}
+.social-icons {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.logout-mydashboard {
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+.top-div-menu-items-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.i {
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 4px;
+  font-size: 14px;
+}
+
+.social-icon {
+  color: #00aeef; /* Set the desired color */
+}
+.xyz {
+  width: 549px;
+  margin: auto;
+  margin-left: 120px;
+}
+.midDiv-container {
+  display: flex;
+  background-color: white;
+  height: 70px;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+  justify-content: center;
+  text-align: center;
+}
+.midDiv-container-items {
+  width: calc(25% - 10px);
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.midDiv-container-items:nth-child(1),
+.midDiv-container-items:nth-child(2),
+.midDiv-container-items:nth-child(3) {
+  border-right: 2px solid black;
+}
+
+.midDiv-close-button {
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.close-button {
+  display: inline-block;
+  border: 6px solid white;
+  border-radius: 50%; /* This makes it circular  */
+}
+.custom-icon {
+  color: white; /* Icon text color */
+  background: black; /* Icon background color */
+  padding: 4px; /* Adjust padding as needed */
+  border-radius: 50%; /* Optional: Make the background circular */
 }
