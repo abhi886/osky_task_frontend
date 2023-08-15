@@ -3,7 +3,7 @@ body {
   min-width: fit-content;
 }
 .container {
-  height: 282px;
+  /* height: 282px; */
   background-color: white;
 }
 .header-container {
@@ -50,7 +50,7 @@ body {
   align-items: center; /* Center vertically */
   justify-items: center; /* Center horizontally */
 }
-.top-div-menu-items {
+.top-div-menu {
   grid-column: span 10;
 }
 
@@ -74,7 +74,7 @@ body {
   height: 100%;
   align-items: center;
 }
-.top-div-menu-items-container {
+.top-div-main-menu {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -82,7 +82,9 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-.i {
+.top-div-main-menu-item {
+  position: relative;
+  list-style-type: none;
   flex-grow: 1;
   text-align: center;
   padding-right: 4px;
@@ -93,13 +95,14 @@ body {
 .social-icon {
   color: #00aeef; /* Set the desired color */
 }
-.xyz {
-  /* display: none; */
+.sub-menu-container {
+  display: none;
+  position: absolute;
   width: 549px;
-  margin: auto;
-  margin-left: 120px;
+  right: -64px;
+  top: 42px;
 }
-.midDiv-container {
+.sub-menu {
   display: flex;
   background-color: white;
   height: 60px;
@@ -148,6 +151,10 @@ body {
   padding: 5px; /* Adjust padding as needed */
   border-radius: 50%; /* Optional: Make the background circular */
 }
-.active {
+.top-div-main-menu-item.active {
   border-bottom: 4px solid #08adef;
+}
+
+.sub-menu-container.active {
+  display: block;
 }
