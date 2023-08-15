@@ -1,27 +1,27 @@
 const menuItems = document.querySelectorAll(".top-div-main-menu-item");
+var activeItem = "";
 
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
-    // 1. Remove the active state of any active menu items
-    removeAllMenuItemsState();
-    //2. Toggle active to the clicked class
-    item.classList.toggle("active");
-    //3. Open the submenu
-    const subMenu = item.querySelector(".sub-menu-container");
-
-    subMenu && subMenu.classList.toggle("active");
-
-    // 4. Get the close button of the sub menu item and attach a event listener
-    console.log(subMenu);
-    // const closeSubmenu = document.querySelector(".midDiv-close-button");
-    // closeSubmenu.addEventListener("click", function () {
-    //   const subMenu = item.querySelector(".sub-menu-container");
-    //   console.log(subMenu);
-    //   subMenu.remove("active");
-    //   console.log("clicked close button");
-    // }
-    // );
-    handleClose(item);
+    // Toggle only when the user click the same menu twice
+    if (activeItem === item) {
+      item.classList.toggle("active");
+      const subMenu = item.querySelector(".sub-menu-container");
+      subMenu && subMenu.classList.toggle("active");
+      return;
+    }
+    // if the user clicks on a different menu item then close the previous
+    // one and show the current one
+    else if (activeItem != item) {
+      removeAllMenuItemsState();
+      item.classList.add("active");
+      const subMenu = item.querySelector(".sub-menu-container");
+      subMenu && subMenu.classList.add("active");
+      activeItem = item;
+      return;
+    } else {
+    }
+    // handleClose(item);
   });
 });
 
