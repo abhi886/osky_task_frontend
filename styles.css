@@ -73,6 +73,7 @@ body {
   gap: 20px;
   height: 100%;
   align-items: center;
+  margin-right: 18px;
 }
 .top-div-main-menu {
   height: 100%;
@@ -91,11 +92,15 @@ body {
   font-size: 14px;
   height: 24px;
 }
+.top-div-main-menu-item:hover {
+  cursor: pointer;
+}
 
 .social-icon {
   color: #00aeef; /* Set the desired color */
 }
 .sub-menu-container {
+  transition: all 5s ease-in-out;
   display: none;
   position: absolute;
   width: 549px;
@@ -157,4 +162,9 @@ body {
 
 .sub-menu-container.active {
   display: block;
+  transition: all 5s ease-in;
+}
+.nav-link {
+  text-decoration: none;
+  color: black;
 }
