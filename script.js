@@ -49,3 +49,11 @@ window.addEventListener("click", function (event) {
     removeAllMenuItemsState();
   }
 });
+function handleClick(url) {
+  let text = "Are you sure you want to navigate to the URL?" + url;
+  if (confirm(text) == true) {
+    window.open(url);
+  } else {
+    return;
+  }
+}
