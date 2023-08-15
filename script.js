@@ -1,4 +1,6 @@
 const menuItems = document.querySelectorAll(".top-div-main-menu-item");
+const midDiv = document.getElementById("midDiv");
+
 var activeItem = "";
 
 menuItems.forEach((item) => {
@@ -21,7 +23,7 @@ menuItems.forEach((item) => {
       return;
     } else {
     }
-    // handleClose(item);
+    handleClose(item);
   });
 });
 
@@ -38,8 +40,12 @@ function handleClose(item) {
   const closeSubmenu = document.querySelector(".midDiv-close-button");
   closeSubmenu.addEventListener("click", function () {
     const subMenu = item.querySelector(".sub-menu-container");
-    console.log(subMenu);
     subMenu && subMenu.remove("active");
-    //   console.log("clicked close button");
   });
 }
+// Close the menu when pressing on any part of the screen
+window.addEventListener("click", function (event) {
+  if (event.target === midDiv) {
+    removeAllMenuItemsState();
+  }
+});
