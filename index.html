@@ -31,20 +31,26 @@
                   class="image"
                 />
               </div>
-              <div class="topDov-social-and-menu">
+              <div class="social-and-menu">
                 <div class="top-Div-social-icons-container">
                   <div class="social-icons">
                     <div>
-                    <i onclick= handleClick("https://www.youtube.com/") class="fab fa-youtube social-icon"></i
-                      >
+                      <i
+                        onclick="handleClick('https://www.linkedin.com/')"
+                        class="fab fa-youtube social-icon"
+                      ></i>
                     </div>
                     <div>
-                     <i  onclick= handleClick("https://www.twitter.com/") class="fab fa-twitter social-icon"></i
-                      >
+                      <i
+                        onclick="handleClick('https://www.twitter.com/')"
+                        class="fab fa-twitter social-icon"
+                      ></i>
                     </div>
                     <div>
-                  <i  onclick= handleClick("https://www.linkedin.com/") class="fab fa-linkedin social-icon"></i
-                      >
+                      <i
+                        onclick="handleClick('https://www.linkedin.com/')"
+                        class="fab fa-linkedin social-icon"
+                      ></i>
                     </div>
                   </div>
                   <div class="logout-mydashboard">
@@ -54,67 +60,87 @@
                 </div>
               </div>
               <div class="top-div-menu">
-                <ul class="top-div-main-menu">
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">Products</a></li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">Safety Tools</a></li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">Training</a></li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">Engagement</a>
-                  <div class="sub-menu-container">
-                    <ul class="sub-menu">
-                      <li class="midDiv-container-items border-right">
-                       <a a href="#" class="nav-link">Latest News</a> 
-                      </li>
-                      <li class="midDiv-container-items border-right">
-                       <a a href="#" class="nav-link">Subscribe to Newsletter</a> 
-                      </li>
-                      <li class="midDiv-container-items border-right">
-                       <a a href="#" class="nav-link">Videos</a> 
-                      </li>
-                    <li class="midDiv-container-items"> <a a href="#" class="nav-link">Publications</a> </li>
-                    </ul>
-                    <div class="midDiv-close-button" >
-                      <div class="close-button">
-                        <i class="fas fa-times custom-icon"></i>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">Membership</a>
+                <div class="hamburger" onclick="handleHamburgerclick()">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <ul id="top-div-main-menu active" class="top-div-main-menu">
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">Products</a>
+                  </li>
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">Safety Tools</a>
+                  </li>
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">Training</a>
+                  </li>
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">Engagement</a>
                     <div class="sub-menu-container">
                       <ul class="sub-menu">
                         <li class="midDiv-container-items border-right">
-                         <a a href="#" class="nav-link">Latest News</a> 
+                          <a a href="#" class="nav-link">Latest News</a>
                         </li>
                         <li class="midDiv-container-items border-right">
-                         <a a href="#" class="nav-link">Subscribe to Newsletter</a> 
+                          <a a href="#" class="nav-link"
+                            >Subscribe to Newsletter</a
+                          >
                         </li>
                         <li class="midDiv-container-items border-right">
-                         <a a href="#" class="nav-link">Videos</a> 
+                          <a a href="#" class="nav-link">Videos</a>
                         </li>
-                      <li class="midDiv-container-items"> <a a href="#" class="nav-link">Publications</a> </li>
+                        <li class="midDiv-container-items">
+                          <a a href="#" class="nav-link">Publications</a>
+                        </li>
                       </ul>
-                      <div class="midDiv-close-button" >
+                      <div class="midDiv-close-button">
                         <div class="close-button">
                           <i class="fas fa-times custom-icon"></i>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">News</a></li>
-                  <li class="top-div-main-menu-item"><a a href="#" class="nav-link">About</a></li>
-                </div>
-              
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">Membership</a>
+                    <div class="sub-menu-container">
+                      <ul class="sub-menu">
+                        <li class="midDiv-container-items border-right">
+                          <a a href="#" class="nav-link">Latest News</a>
+                        </li>
+                        <li class="midDiv-container-items border-right">
+                          <a a href="#" class="nav-link"
+                            >Subscribe to Newsletter</a
+                          >
+                        </li>
+                        <li class="midDiv-container-items border-right">
+                          <a a href="#" class="nav-link">Videos</a>
+                        </li>
+                        <li class="midDiv-container-items">
+                          <a a href="#" class="nav-link">Publications</a>
+                        </li>
+                      </ul>
+                      <div class="midDiv-close-button">
+                        <div class="close-button">
+                          <i class="fas fa-times custom-icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">News</a>
+                  </li>
+                  <li class="top-div-main-menu-item">
+                    <a a href="#" class="nav-link">About</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        
       </nav>
     </header>
-    <main >
+    <main>
       <section id="midDiv" class="midDiv"></section>
     </main>
     <script src="script.js"></script>
-
   </body>
 </html>

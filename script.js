@@ -55,3 +55,9 @@ function handleClick(url) {
     return;
   }
 }
+function handleHamburgerclick() {
+  const mainMenu = document
+    .querySelector(".top-div-main-menu")
+    .classList.toggle("active");
+  console.log(mainMenu);
+}
