@@ -55,6 +55,7 @@ body {
 }
 
 .top-Div-social-icons-container {
+  padding-top: 4px;
   display: flex;
   justify-content: flex-end;
   gap: 40px;

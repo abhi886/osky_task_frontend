@@ -1,14 +1,15 @@
 const menuItems = document.querySelectorAll(".top-div-main-menu-item");
 const midDiv = document.getElementById("midDiv");
+const closeSubmenu = document.querySelector(".midDiv-close-button");
 
 var activeItem = "";
 
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
+    const subMenu = item.querySelector(".sub-menu-container");
     // Toggle only when the user click the same menu twice
     if (activeItem === item) {
       item.classList.toggle("active");
-      const subMenu = item.querySelector(".sub-menu-container");
       subMenu && subMenu.classList.toggle("active");
       return;
     }
@@ -17,7 +18,6 @@ menuItems.forEach((item) => {
     else if (activeItem != item) {
       removeAllMenuItemsState();
       item.classList.add("active");
-      const subMenu = item.querySelector(".sub-menu-container");
       subMenu && subMenu.classList.add("active");
       activeItem = item;
       return;
@@ -37,9 +37,7 @@ function removeAllMenuItemsState() {
 }
 
 function handleClose(item) {
-  const closeSubmenu = document.querySelector(".midDiv-close-button");
   closeSubmenu.addEventListener("click", function () {
-    const subMenu = item.querySelector(".sub-menu-container");
     subMenu && subMenu.remove("active");
   });
 }
