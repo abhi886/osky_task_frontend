@@ -7,7 +7,6 @@ body {
   background-color: white;
 }
 .header-container {
-  width: 900px;
   max-width: 1140px;
   margin: auto;
 }
@@ -185,6 +184,9 @@ body {
     padding-right: 24px;
     padding-top: 14px;
   }
+  .top-Div-social-icons-container{
+  font-size: 14px;
+  }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -194,6 +196,7 @@ body {
   .hamburger {
     display: none;
   }
+  .
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
